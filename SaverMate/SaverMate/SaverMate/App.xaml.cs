@@ -30,6 +30,10 @@ namespace SaverMate
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<RewardShopPage, RewardShopPageViewModel>();
+            containerRegistry.RegisterForNavigation<DashboardPage, DashboardPageViewModel>();
+            containerRegistry.RegisterForNavigation<TabNavPage, TabNavPageViewModel>();
+            containerRegistry.RegisterForNavigation<AchievementPage, AchievementPageViewModel>();
         }
     }
 }
