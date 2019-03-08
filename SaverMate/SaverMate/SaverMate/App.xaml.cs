@@ -1,5 +1,6 @@
 ﻿using Prism;
 using Prism.Ioc;
+using Prism.Modularity;
 using SaverMate.ViewModels;
 using SaverMate.Views;
 using Xamarin.Forms;
@@ -23,7 +24,7 @@ namespace SaverMate
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            await NavigationService.NavigateAsync("MasterDetailNavPage/TabNavPage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -34,6 +35,13 @@ namespace SaverMate
             containerRegistry.RegisterForNavigation<DashboardPage, DashboardPageViewModel>();
             containerRegistry.RegisterForNavigation<TabNavPage, TabNavPageViewModel>();
             containerRegistry.RegisterForNavigation<AchievementPage, AchievementPageViewModel>();
+            containerRegistry.RegisterForNavigation<MasterDetailNavPage, MasterDetailNavPageViewModel>();
+        }
+
+        protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
+        {
+            base.ConfigureModuleCatalog(moduleCatalog);
+
         }
     }
 }

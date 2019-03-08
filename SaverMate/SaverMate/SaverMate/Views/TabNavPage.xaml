@@ -4,11 +4,13 @@
             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
             xmlns:views="clr-namespace:SaverMate.Views;assembly=SaverMate"
             xmlns:views1="clr-namespace:SaverMate.Views"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
             prism:ViewModelLocator.AutowireViewModel="True"
             x:Class="SaverMate.Views.TabNavPage">
     <NavigationPage Title="Main">
         <x:Arguments>
-            <views:DashboardPage />
+            <views:DashboardPage Title="Dashboard"/>
         </x:Arguments>
     </NavigationPage>
     <NavigationPage Title="Achievements">
