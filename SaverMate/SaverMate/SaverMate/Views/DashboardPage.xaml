@@ -64,9 +64,10 @@
               </StackLayout>
           </Grid>
       <StackLayout Grid.Row="1">
-<ListView>
+            <Button Command="{Binding ClickedCommand}"></Button>
+            <ListView>
 
-</ListView>
+            </ListView>
       </StackLayout>
   </Grid>
 </ContentPage>

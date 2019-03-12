@@ -1,6 +1,8 @@
-﻿using Prism;
+﻿using System;
+using Prism;
 using Prism.Ioc;
 using Prism.Modularity;
+using SaverMate.Data;
 using SaverMate.ViewModels;
 using SaverMate.Views;
 using Xamarin.Forms;
@@ -36,12 +38,21 @@ namespace SaverMate
             containerRegistry.RegisterForNavigation<TabNavPage, TabNavPageViewModel>();
             containerRegistry.RegisterForNavigation<AchievementPage, AchievementPageViewModel>();
             containerRegistry.RegisterForNavigation<MasterDetailNavPage, MasterDetailNavPageViewModel>();
+
+
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
             base.ConfigureModuleCatalog(moduleCatalog);
 
+            Type moduleCType = typeof(Authentication.AuthenticationModule);
+            moduleCatalog.AddModule(new ModuleInfo()
+            {
+                ModuleName = moduleCType.Name,
+                ModuleType = moduleCType,
+                InitializationMode = InitializationMode.WhenAvailable
+            });
         }
     }
 }

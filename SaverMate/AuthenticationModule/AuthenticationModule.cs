@@ -1,7 +1,7 @@
-﻿using Prism.Ioc;
+﻿using Authentication.ViewModels;
+using Authentication.Views;
+using Prism.Ioc;
 using Prism.Modularity;
-using AuthenticationModule.ViewModels;
-using AuthenticationModule.Views;
 
 namespace Authentication
 {
@@ -14,7 +14,8 @@ namespace Authentication
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<ViewA, ViewAViewModel>();
+            containerRegistry.RegisterForNavigation<LoginStage1, LoginStage1ViewModel>();
+            containerRegistry.RegisterForNavigation<LoginStage2, LoginStage2ViewModel>();
         }
     }
 }
