@@ -11,16 +11,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\LoginStage1Page.xaml.cs">
+      <DependentUpon>LoginStage1Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\LoginStage2Page.xaml.cs">
+      <DependentUpon>LoginStage2Page.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Views\ViewA.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\LoginStage1.xaml">
+    <EmbeddedResource Update="Views\LoginStage1Page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\LoginStage2.xaml">
+    <EmbeddedResource Update="Views\LoginStage2Page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

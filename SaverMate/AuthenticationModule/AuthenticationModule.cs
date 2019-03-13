@@ -14,8 +14,8 @@ namespace Authentication
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<LoginStage1, LoginStage1ViewModel>();
-            containerRegistry.RegisterForNavigation<LoginStage2, LoginStage2ViewModel>();
+            containerRegistry.RegisterForNavigation<LoginStage1Page, LoginStage1PageViewModel>();
+            containerRegistry.RegisterForNavigation<LoginStage2Page, LoginStage2PageViewModel>();
         }
     }
 }

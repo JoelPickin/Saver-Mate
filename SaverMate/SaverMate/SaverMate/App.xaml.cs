@@ -1,10 +1,23 @@
 ﻿using System;
+using Account;
+using Authentication;
 using Prism;
 using Prism.Ioc;
 using Prism.Modularity;
 using SaverMate.Data;
+using SaverMate.Models;
 using SaverMate.ViewModels;
+using SaverMate.ViewModels.Accounts;
+using SaverMate.ViewModels.Achievements;
+using SaverMate.ViewModels.Dashboard;
+using SaverMate.ViewModels.Navigation;
+using SaverMate.ViewModels.Rewards;
 using SaverMate.Views;
+using SaverMate.Views.Accounts;
+using SaverMate.Views.Achievements;
+using SaverMate.Views.Dashboard;
+using SaverMate.Views.Navigation;
+using SaverMate.Views.Rewards;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -32,26 +45,33 @@ namespace SaverMate
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<RewardShopPage, RewardShopPageViewModel>();
             containerRegistry.RegisterForNavigation<DashboardPage, DashboardPageViewModel>();
             containerRegistry.RegisterForNavigation<TabNavPage, TabNavPageViewModel>();
             containerRegistry.RegisterForNavigation<AchievementPage, AchievementPageViewModel>();
             containerRegistry.RegisterForNavigation<MasterDetailNavPage, MasterDetailNavPageViewModel>();
-
-
+            containerRegistry.RegisterForNavigation<ViewAccountPage, ViewAccountPageViewModel>();
+            containerRegistry.RegisterForNavigation<CreateAccountPage, CreateAccountPageViewModel>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
             base.ConfigureModuleCatalog(moduleCatalog);
 
-            Type moduleCType = typeof(Authentication.AuthenticationModule);
+            Type  module1 = typeof(AuthenticationModule);
             moduleCatalog.AddModule(new ModuleInfo()
             {
-                ModuleName = moduleCType.Name,
-                ModuleType = moduleCType,
+                ModuleName = module1.Name,
+                ModuleType = module1,
                 InitializationMode = InitializationMode.WhenAvailable
+            });
+
+            Type module2 = typeof(AccountModule);
+            moduleCatalog.AddModule(new ModuleInfo()
+            {
+                ModuleName = module2.Name,
+                ModuleType = module2,
+                InitializationMode = InitializationMode.OnDemand
             });
         }
     }
