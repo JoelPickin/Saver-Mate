@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SaverMate.ViewModels
+namespace SaverMate.ViewModels.Navigation
 {
 	public class MasterDetailNavPageViewModel : BindableBase
 	{

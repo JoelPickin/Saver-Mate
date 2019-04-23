@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Authentication.Views.LoginStage1Page"
+             Title="Login Stage One">
+<StackLayout VerticalOptions="Center" HorizontalOptions="Fill">
+    <StackLayout VerticalOptions="Center" Spacing="0">
+        <Label Text="Username" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Entry Text="{Binding Username}" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+    </StackLayout>
+    <StackLayout VerticalOptions="Center" Spacing="0">
+        <Label Text="Password" HorizontalOptions="Center"/>
+        <Entry Text="{Binding Password}" IsPassword="True" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+    </StackLayout>
+
+    <Button Text="Continue" HorizontalOptions="Center" VerticalOptions="Center" Command="{Binding LoginCommand}"/>
+</StackLayout>
+</ContentPage>

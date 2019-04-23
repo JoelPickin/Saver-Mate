@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace SaverMate.Views
+namespace SaverMate.Views.Navigation
 {
     public partial class TabNavPage : TabbedPage
     {

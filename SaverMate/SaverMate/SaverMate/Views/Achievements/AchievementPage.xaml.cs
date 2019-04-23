@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace SaverMate.Views
+namespace SaverMate.Views.Achievements
 {
     public partial class AchievementPage : ContentPage
     {

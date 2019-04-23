@@ -4,11 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SaverMate.ViewModels
+namespace SaverMate.ViewModels.Rewards
 {
-	public class AchievementPageViewModel : BindableBase
+	public class RewardShopPageViewModel : BindableBase
 	{
-        public AchievementPageViewModel()
+        public RewardShopPageViewModel()
         {
 
         }

@@ -4,11 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SaverMate.ViewModels
+namespace SaverMate.ViewModels.Accounts
 {
-	public class TabNavPageViewModel : BindableBase
+	public class CreateAccountPageViewModel : BindableBase
 	{
-        public TabNavPageViewModel()
+        public CreateAccountPageViewModel()
         {
 
         }
