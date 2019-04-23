@@ -5,16 +5,18 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using Prism.Navigation;
+using SaverMate.Models;
 
 namespace SaverMate.ViewModels
 {
 	public class DashboardPageViewModel : ViewModelBase
 	{
+        public ObservableCollection<Account> Accounts { get; set; }
 
 		public DashboardPageViewModel(INavigationService navigationService)
 			: base(navigationService)
 		{
-
+		    Accounts = LoadData();
 		}
 
 	    public override void OnNavigatedFrom(INavigationParameters parameters)
@@ -26,12 +28,40 @@ namespace SaverMate.ViewModels
 	    {
 	        base.OnNavigatedTo(parameters);
 
-	        var x = 0;
 	    }
 
-	    public void LoadData()
+	    public ObservableCollection<Account> LoadData()
 	    {
-
+	       return new ObservableCollection<Account>
+	        {
+                new Account
+                {
+                    Id = 1,
+                    Title = "Sell on Ebay",
+                    Value = 101.12m,
+                    Notes = "Blah Blah Blah",
+                    HasPositiveAction = true,
+                    HasNegativeAction = true
+                },
+	            new Account
+	            {
+	                Id = 2,
+	                Title = "Side Hustle",
+	                Value = 12.12m,
+	                Notes = "Blah Blah Blah",
+	                HasPositiveAction = true,
+	                HasNegativeAction = false
+	            },
+	            new Account
+	            {
+	                Id = 3,
+	                Title = "Savings",
+	                Value = 1201.12m,
+	                Notes = "Blah Blah Blah",
+	                HasPositiveAction = true,
+	                HasNegativeAction = true
+	            }
+	        };
 	    }
 	}
 }

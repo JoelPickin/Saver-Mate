@@ -90,6 +90,10 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common.csproj">
+      <Project>{27142aee-ccdf-487b-9ddd-d3e5003d3547}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SaverMate\SaverMate.csproj">
       <Project>{A682884C-CB44-4A89-B752-27BB634E0ABE}</Project>
       <Name>SaverMate</Name>

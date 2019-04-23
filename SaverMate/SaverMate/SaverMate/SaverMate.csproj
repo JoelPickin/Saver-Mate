@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\AuthenticationModule\Authentication.csproj" />
+    <ProjectReference Include="..\..\Common\Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,8 +32,6 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <Import Project="..\..\Shared\Shared.projitems" Label="Shared" />
 
 </Project>
