@@ -22,7 +22,13 @@
     <EmbeddedResource Update="Views\Accounts\CreateAccountPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Dashboard\OverviewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Navigation\MasterDetailNavPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Overview\OverviewPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Rewards\RewardShopPage.xaml">
@@ -34,11 +40,6 @@
     <EmbeddedResource Update="Views\Accounts\ViewAccountPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ViewModels\Dashboard\" />
-    <Folder Include="Views\Dashboard\" />
   </ItemGroup>
 
   <Import Project="..\..\Shared\Shared.projitems" Label="Shared" />

@@ -8,14 +8,14 @@ using SaverMate.Models;
 using SaverMate.ViewModels;
 using SaverMate.ViewModels.Accounts;
 using SaverMate.ViewModels.Achievements;
-using SaverMate.ViewModels.Dashboard;
 using SaverMate.ViewModels.Navigation;
+using SaverMate.ViewModels.Overview;
 using SaverMate.ViewModels.Rewards;
 using SaverMate.Views;
 using SaverMate.Views.Accounts;
 using SaverMate.Views.Achievements;
-using SaverMate.Views.Dashboard;
 using SaverMate.Views.Navigation;
+using SaverMate.Views.Overview;
 using SaverMate.Views.Rewards;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -45,12 +45,13 @@ namespace SaverMate
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<RewardShopPage, RewardShopPageViewModel>();
-            containerRegistry.RegisterForNavigation<Views.DashboardPage, DashboardPageViewModel>();
+
             containerRegistry.RegisterForNavigation<TabNavPage, TabNavPageViewModel>();
             containerRegistry.RegisterForNavigation<AchievementPage, AchievementPageViewModel>();
             containerRegistry.RegisterForNavigation<MasterDetailNavPage, MasterDetailNavPageViewModel>();
             containerRegistry.RegisterForNavigation<ViewAccountPage, ViewAccountPageViewModel>();
             containerRegistry.RegisterForNavigation<CreateAccountPage, CreateAccountPageViewModel>();
+            containerRegistry.RegisterForNavigation<OverviewPage, OverviewPageViewModel>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

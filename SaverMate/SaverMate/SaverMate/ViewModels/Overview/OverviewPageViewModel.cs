@@ -1,44 +1,41 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
+using Prism.Navigation;
+using SaverMate.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
-using Prism.Modularity;
-using Prism.Navigation;
 using Xamarin.Forms;
-using SaverMate.Models;
 
-namespace SaverMate.ViewModels.Dashboard
+namespace SaverMate.ViewModels.Overview
 {
-	public class DashboardPageViewModel : ViewModelBase
-	{
-
-		public ICommand GoToAccountPageCommand { get; set; }
+    public class OverviewPageViewModel : ViewModelBase
+    {
+        public ICommand GoToAccountPageCommand { get; set; }
         public ObservableCollection<Account> Accounts { get; set; }
-
-        public DashboardPageViewModel(INavigationService navigationService)
-			: base(navigationService)
+        public OverviewPageViewModel(INavigationService navigationService)
+            : base(navigationService)
         {
-			LoadCommands(); 
+            LoadCommands();
             Accounts = LoadData();
         }
 
-		public override void OnNavigatedFrom(INavigationParameters parameters)
-		{
-			base.OnNavigatedFrom(parameters);
-		}
+        public override void OnNavigatedFrom(INavigationParameters parameters)
+        {
+            base.OnNavigatedFrom(parameters);
+        }
 
-		public override void OnNavigatedTo(INavigationParameters parameters)
-		{
-			base.OnNavigatedTo(parameters);
-		}
+        public override void OnNavigatedTo(INavigationParameters parameters)
+        {
+            base.OnNavigatedTo(parameters);
+        }
 
-		private void LoadCommands()
-		{
-			GoToAccountPageCommand = new Command(() => GoToAccountPage());
-		}
+        private void LoadCommands()
+        {
+            GoToAccountPageCommand = new Command(() => GoToAccountPage());
+        }
 
         private void GoToAccountPage()
         {
