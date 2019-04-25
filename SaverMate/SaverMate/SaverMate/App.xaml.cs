@@ -1,5 +1,4 @@
 ﻿using System;
-using Account;
 using Authentication;
 using Prism;
 using Prism.Ioc;
@@ -46,7 +45,7 @@ namespace SaverMate
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<RewardShopPage, RewardShopPageViewModel>();
-            containerRegistry.RegisterForNavigation<DashboardPage, DashboardPageViewModel>();
+            containerRegistry.RegisterForNavigation<Views.DashboardPage, DashboardPageViewModel>();
             containerRegistry.RegisterForNavigation<TabNavPage, TabNavPageViewModel>();
             containerRegistry.RegisterForNavigation<AchievementPage, AchievementPageViewModel>();
             containerRegistry.RegisterForNavigation<MasterDetailNavPage, MasterDetailNavPageViewModel>();
@@ -64,14 +63,6 @@ namespace SaverMate
                 ModuleName = module1.Name,
                 ModuleType = module1,
                 InitializationMode = InitializationMode.WhenAvailable
-            });
-
-            Type module2 = typeof(AccountModule);
-            moduleCatalog.AddModule(new ModuleInfo()
-            {
-                ModuleName = module2.Name,
-                ModuleType = module2,
-                InitializationMode = InitializationMode.OnDemand
             });
         }
     }

@@ -8,6 +8,7 @@ using System.Windows.Input;
 using Prism.Modularity;
 using Prism.Navigation;
 using Xamarin.Forms;
+using SaverMate.Models;
 
 namespace SaverMate.ViewModels.Dashboard
 {
@@ -15,12 +16,14 @@ namespace SaverMate.ViewModels.Dashboard
 	{
 
 		public ICommand GoToAccountPageCommand { get; set; }
+        public ObservableCollection<Account> Accounts { get; set; }
 
-		public DashboardPageViewModel(INavigationService navigationService)
+        public DashboardPageViewModel(INavigationService navigationService)
 			: base(navigationService)
         {
-			LoadCommands();  
-		}
+			LoadCommands(); 
+            Accounts = LoadData();
+        }
 
 		public override void OnNavigatedFrom(INavigationParameters parameters)
 		{
@@ -41,5 +44,39 @@ namespace SaverMate.ViewModels.Dashboard
         {
             NavigationService.NavigateAsync("AccountPage", useModalNavigation: true);
         }
-	}
+
+        public ObservableCollection<Account> LoadData()
+        {
+            return new ObservableCollection<Account>
+            {
+                new Account
+                {
+                    Id = 1,
+                    Title = "Sell on Ebay",
+                    Value = 101.12m,
+                    Notes = "Blah Blah Blah",
+                    HasPositiveAction = true,
+                    HasNegativeAction = true
+                },
+                new Account
+                {
+                    Id = 2,
+                    Title = "Side Hustle",
+                    Value = 12.12m,
+                    Notes = "Blah Blah Blah",
+                    HasPositiveAction = true,
+                    HasNegativeAction = false
+                },
+                new Account
+                {
+                    Id = 3,
+                    Title = "Savings",
+                    Value = 1201.12m,
+                    Notes = "Blah Blah Blah",
+                    HasPositiveAction = true,
+                    HasNegativeAction = true
+                }
+            };
+        }
+    }
 }

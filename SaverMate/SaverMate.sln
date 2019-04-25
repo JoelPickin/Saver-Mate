@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.329
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaverMate", "SaverMate\SaverMate\SaverMate.csproj", "{D3EA295E-75E9-4588-89D2-5AA7DDCFF20A}"
 EndProject
@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{D9EC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication", "AuthenticationModule\Authentication.csproj", "{38CC6372-220B-4E04-A1A5-99BD32F0E179}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{27142AEE-CCDF-487B-9DDD-D3E5003D3547}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{27142AEE-CCDF-487B-9DDD-D3E5003D3547}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

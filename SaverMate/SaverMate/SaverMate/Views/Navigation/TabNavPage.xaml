@@ -8,17 +8,17 @@
             x:Class="SaverMate.Views.Navigation.TabNavPage">
     <NavigationPage Title="Main">
         <x:Arguments>
-            <DashboardPage Title="Dashboard"/>
+          
         </x:Arguments>
     </NavigationPage>
     <NavigationPage Title="Achievements">
         <x:Arguments>
-            <AchievementPage />
+          
         </x:Arguments>
     </NavigationPage>
     <NavigationPage Title="Rewards">
         <x:Arguments>
-            <RewardShopPage />
+      
         </x:Arguments>
     </NavigationPage>
 </TabbedPage>
