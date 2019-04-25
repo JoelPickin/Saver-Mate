@@ -13,6 +13,7 @@ namespace SaverMate.ViewModels.Overview
 {
     public class OverviewPageViewModel : ViewModelBase
     {
+        public ICommand GoToCreateAccountPageCommand { get; set; }
         public ICommand GoToAccountPageCommand { get; set; }
         public ObservableCollection<Account> Accounts { get; set; }
         public OverviewPageViewModel(INavigationService navigationService)
@@ -34,12 +35,9 @@ namespace SaverMate.ViewModels.Overview
 
         private void LoadCommands()
         {
-            GoToAccountPageCommand = new Command(() => GoToAccountPage());
-        }
-
-        private void GoToAccountPage()
-        {
-            NavigationService.NavigateAsync("AccountPage", useModalNavigation: true);
+            GoToAccountPageCommand = new Command(async ()=> await NavigationService.NavigateAsync("AccountPage", useModalNavigation: true));
+            GoToCreateAccountPageCommand = new Command(async ()=> await NavigationService.NavigateAsync("CreateAccountPage"));
+            
         }
 
         public ObservableCollection<Account> LoadData()

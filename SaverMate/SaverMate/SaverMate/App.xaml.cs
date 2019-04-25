@@ -38,7 +38,7 @@ namespace SaverMate
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("MasterDetailNavPage/TabNavPage");
+            await NavigationService.NavigateAsync("MasterDetailNavPage/OverviewPage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

@@ -3,22 +3,25 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            xmlns:overview="clr-namespace:SaverMate.Views.Overview"
+            xmlns:achievement="clr-namespace:SaverMate.Views.Achievements"
+            xmlns:reward="clr-namespace:SaverMate.Views.Rewards"
             android:TabbedPage.ToolbarPlacement="Bottom"
             prism:ViewModelLocator.AutowireViewModel="True"
             x:Class="SaverMate.Views.Navigation.TabNavPage">
     <NavigationPage Title="Main">
         <x:Arguments>
-          
+            <overview:OverviewPage/>
         </x:Arguments>
     </NavigationPage>
     <NavigationPage Title="Achievements">
         <x:Arguments>
-          
+            <achievement:AchievementPage/>
         </x:Arguments>
     </NavigationPage>
     <NavigationPage Title="Rewards">
         <x:Arguments>
-      
+      <reward:RewardShopPage/>
         </x:Arguments>
     </NavigationPage>
 </TabbedPage>
